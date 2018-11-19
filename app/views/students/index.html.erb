@@ -7,7 +7,7 @@
     <tr class="table-success">
       <th scope="row">Nombre</th>
       <th scope="row">Edad</th>
-      
+      <th scope="row">Email</th>
       <td></td>
       <td></td>
       <td></td>
@@ -15,6 +15,10 @@
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
+       <td></td>
+      <td></td>
+       <td></td>
       <td></td>
       
       
@@ -31,6 +35,10 @@
 
       <th scope="col">  <%= student.name %> </th>
       <th scope="col">  <%= student.age %> </th>
+      
+      
+     
+      <th scope="col">  <%= student.email %> </th>
    
       <th scope="col">  <%= link_to 'Show', student, class:"btn btn-success" %> </th>
       <th scope="col">  <%= link_to 'Edit', edit_student_path(student), class:"btn btn-primary" %> </th>
