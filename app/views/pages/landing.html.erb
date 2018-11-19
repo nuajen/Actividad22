@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+   <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#index">Index <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#pages/landing">Landing</a>
+      </li>
+    </ul>
+</div>
+</nav>
+
+<h1>Landing</h1>
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Students</h1>
+
+<table class="table table-hover">
+<tbody>
+    <tr class="table-success">
+      <th scope="row">Nombre</th>
+      <th scope="row">Edad</th>
+      <th scope="row">Email</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+       <td></td>
+      <td></td>
+       <td></td>
+      <td></td>
+      
+      
+      </tr>
+</tbody>
+</table>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+
+    <% @students.each do |student| %>
+
+
+      <th scope="col">  <%= student.name %> </th>
+      <th scope="col">  <%= student.age %> </th>
+      
+      
+     
+      <th scope="col">  <%= student.email %> </th>
+   
+      <th scope="col">  <%= link_to 'Show', student, class:"btn btn-success" %> </th>
+      <th scope="col">  <%= link_to 'Edit', edit_student_path(student), class:"btn btn-primary" %> </th>
+      <th scope="col">  <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-warning" %> </th>
+
+
+ </tr>
+  </thead>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Student', new_student_path %>
